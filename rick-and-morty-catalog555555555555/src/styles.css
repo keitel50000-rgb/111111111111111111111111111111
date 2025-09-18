@@ -1,0 +1,12 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { --card: rgba(255,255,255,0.04) }
+.container{max-width:72rem;margin:0 auto;padding:0 1rem}
+.card{background:var(--card);border:1px solid rgb(30 41 59);border-radius:1rem;padding:1rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:.75rem;background:#4f46e5}
+.btn:hover{background:#4338ca}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:.75rem;border:1px solid rgb(51 65 85);color:#e2e8f0}
+.input{width:100%;border-radius:.75rem;background:rgb(2 6 23);border:1px solid rgb(30 41 59);padding:.5rem .75rem;color:#e5e7eb}
+.grid-cards{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:1rem}
+@media (min-width:640px){.grid-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.grid-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+nav a:hover{color:#818cf8}
