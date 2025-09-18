@@ -8,6 +8,14 @@
   <script type="module" crossorigin src="/111111111111111111111111111111/assets/index-CRSv5Y4Q.js"></script>
   <link rel="stylesheet" crossorigin href="/111111111111111111111111111111/assets/index-CNf88xwI.css">
 </head><body class="bg-white text-zinc-900">
+<script>
+	window.addEventListener('error', e => {
+		const b=document.body; const d=document.createElement('pre'); d.style.cssText='color:red;padding:8px;white-space:pre-wrap'; d.textContent='JS error: '+e.message; b.prepend(d);
+	});
+	window.addEventListener('unhandledrejection', e => {
+		const b=document.body; const d=document.createElement('pre'); d.style.cssText='color:darkred;padding:8px;white-space:pre-wrap'; d.textContent='Promise rejection: '+(e.reason && e.reason.message || e.reason); b.prepend(d);
+	});
+</script>
 <div id="probe" style="padding:8px;background:#fde68a;color:#111;text-align:center">PROBE v: $TS</div>
 				<div id="probe" style="padding:8px;background:#fde68a;color:#111;text-align:center">PROBE v: 1758209978</div>
 				<div id="app">
