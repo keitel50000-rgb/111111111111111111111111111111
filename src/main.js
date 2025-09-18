@@ -1,9 +1,14 @@
-// Entry point para Vite
-document.getElementById('app').innerHTML = `
-	<main style="padding:2rem;text-align:center">
-		<h1>Rick & Morty SPA</h1>
-		<p>¡Deploy exitoso en GitHub Pages!</p>
-		<p style="font-size:2rem">🚀</p>
-	</main>
+import Navbar from './components/Navbar.js'
+import router from './router.js'
+import './styles.css'
+
+const app=document.getElementById('app');
+app.innerHTML = `
+  <div id="root">
+    <header id="nav"></header>
+    <main id="view"></main>
+  </div>
 `;
-console.log('¡App Rick & Morty SPA iniciada!');
+
+const nav = Navbar(); document.getElementById('nav').appendChild(nav);
+router();
